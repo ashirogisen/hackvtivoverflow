@@ -178,6 +178,7 @@ export default {
               'success'
           )
           this.displayAnswers()
+          this.createdAnswer = ''
         })
         .catch(err => {
           Swal.fire({
@@ -231,7 +232,7 @@ export default {
 }
 
 #from {
-  margin-left: 620px;
+  margin-left: 550px;
   margin-bottom: 20px;
 }
 

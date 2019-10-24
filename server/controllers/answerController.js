@@ -13,27 +13,22 @@ class answerController {
             user: user_id
         }
 
-        let user = null
-
         Question.findById(req.body.question)
             .then(question_data => {
-                user = question_data._user
+                let user = question_data.user
+                if (user !== user_id) {
+                    Answer.create(createdData)
+                    .then(created_data => {
+                        res.status(201).json(created_data)
+                    })
+                    .catch(next)
+                } else {
+                    throw {
+                        msg: 'You cannot answer your own question'
+                    }
+                }
             })
             .catch(next)
-
-        if (user == user_id) {
-            Answer.create(createdData)
-            .then(created_data => {
-                res.status(201).json(created_data)
-            })
-            .catch(next)
-        } else {
-            throw {
-                msg: 'You cannot answer your own question'
-            }
-        }
-
-        
     }
 
     static displayByUserId (req, res, next) {

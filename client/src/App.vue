@@ -21,7 +21,7 @@ export default {
           this.$router.push('/questions')
       } else {
           this.changeIsLogin(false);
-          this.$router.push('/login')
+          this.$router.push('/')
       }
     },
     ...mapActions([
