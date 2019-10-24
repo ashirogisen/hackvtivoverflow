@@ -199,8 +199,8 @@ export default {
 
 <style scoped>
 .btn {
-  height: 46px;
-  width: 56px;
+  height: 40px;
+  width: 50px;
   margin-bottom: 5px;
 }
 #title {
@@ -217,14 +217,16 @@ export default {
 }
 
 #up {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   margin-bottom: 10px;
+  margin-right:10px;
 }
 
 #down {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
+  margin-right:10px;
 }
 
 #currentQuestion {
@@ -246,7 +248,7 @@ export default {
 }
 
 .mr-2 {
-  padding-left: 23px;
+  padding-left: 19px;
   font-size: 20px;
   font-weight: bold;
 }
